@@ -1,0 +1,10 @@
+<!-- app/views/cars/show.html.erb -->
+<h1><%= @car.make %></h1>
+
+<p><strong>Model:</strong> <%= @car.model %></p>
+<p><strong>Year:</strong> <%= @car.year %></p>
+<p><strong>Color:</strong> <%= @car.color %></p>
+<p><strong>Information:</strong> <%= @car.information %></p>
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back to Cars', cars_path %>

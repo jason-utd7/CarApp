@@ -1,0 +1,11 @@
+# test/views/cars/index.html.erb
+<h1>Cars</h1>
+
+<% @cars.each do |car| %>
+  <div class="car">
+    <p><%= car.make %></p>
+    <p><%= car.model %></p>
+    <p><%= car.year %></p>
+    <p><%= car.information%></p>
+  </div>
+<% end %>

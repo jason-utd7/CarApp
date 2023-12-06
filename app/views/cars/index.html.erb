@@ -1,0 +1,20 @@
+<!-- app/views/cars/index.html.erb -->
+<% content_for :title, "Cars" %>
+<%= render layout: 'layouts/application' do %>
+  <div class="container">
+  <h1>Cars</h1>
+  <ul class="list-group">
+      <% @cars.each do |car| %>
+        <li class="list-group-item">
+          <%= link_to car.make, car, class: "text-decoration-none" %>
+        </li>
+      <% end %>
+    </ul>
+  <%= link_to 'New Car', new_car_path, class: "btn btn-primary mt-3" %>
+  </div>
+<% end %>
+
+<!-- app/views/cars/show.html.erb -->
+<% content_for :title, @car.make %>
+<h1><%= @car.make %></h1>
+<!-- ... rest of the show view ... -->
